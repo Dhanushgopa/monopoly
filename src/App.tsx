@@ -58,10 +58,9 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-100 to-red-50 p-4">
     <div className="min-h-screen p-4 cultural-pattern" style={{ backgroundColor: 'var(--vintage-cream)' }}>
       {/* Header */}
-      <div className="text-center mb-6">
+      <div className="text-center mb-4 lg:mb-6">
         <h1 className="monopoly-title text-5xl mb-2" style={{ color: 'var(--vintage-dark)' }}>
           MONOPOLY
         </h1>
@@ -73,7 +72,7 @@ function App() {
         </p>
       </div>
 
-      <div className="flex flex-col lg:flex-row gap-6 max-w-7xl mx-auto">
+      <div className="flex flex-col lg:flex-row gap-4 lg:gap-6 max-w-7xl mx-auto">
         {/* Game Board */}
         <div className="flex-1">
           <GameBoard
@@ -84,7 +83,7 @@ function App() {
         </div>
 
         {/* Player Panel */}
-        <div className="lg:w-80">
+        <div className="lg:w-80 w-full">
           <PlayerPanel
             players={gameState.players}
             currentPlayer={gameState.currentPlayer}
@@ -119,10 +118,9 @@ function App() {
       <AchievementSystem players={gameState.players} gameState={gameState} />
 
       {/* Cultural Footer */}
-      <div className="text-center mt-8 text-amber-700 text-sm">
+      <div className="text-center mt-4 lg:mt-8 text-sm" style={{ color: 'var(--vintage-brown)' }}>
         "Everything can be learned through play"
       </div>
-    </div>
     </div>
   );
 }
